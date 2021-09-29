@@ -1,0 +1,334 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="TestArtSell.General.UserMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>ArtSell Portal</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+<%--    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/jquery.signalR-2.4.1.min.js"></script>--%>
+	<link rel="stylesheet" href="~/AdminPanelAssets/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="~/AdminPanelAssets/assets/css/ready.css">
+	<link rel="stylesheet" href="~/AdminPanelAssets/assets/css/demo.css">
+
+    <style>
+        .shopnow:hover {
+            color:darkcyan;
+            font-weight:900;
+        }
+        .bcmSeller:hover {
+            color:darkcyan;
+            font-weight:900;
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        window.setInterval(function () { 
+            //console.log("asasas");
+    getDataCount();
+}, 20000);
+        
+        function getData() {
+            //console.log("asasas");
+  $.ajax({
+                    type: "GET",
+                    url: "../Seller/SellerDashboard.aspx/GetData",
+                    
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+      success: function (data) {
+                 var $tbl = $('#tbl');
+          if (data.d == "0") {
+              document.getElementById("lblNotiCount").style.backgroundColor = "white";
+              document.getElementById("lblNotiCount").innerText = data.d;
+          }
+          else { 
+              if (data.d.length > 0) {
+
+                  var newdata = data.d;
+                  $tbl.empty();
+                 
+                  var rows = [];
+                  for (var i = 0; i < newdata.length; i++) {
+                      //console.log("dataod");
+                      //console.log(newdata[i].message);
+                      rows.push(' <tr><td> <a href="#"><div class="notif-icon notif-success"><i class="la la-comment"></i></div><div class="notif-content"><span class="block">' + newdata[i].message + ' </span><span class="time">'+newdata[i].messageTime +'    ,' + newdata[i].messageDate + '</span></div></a></td></tr>');
+                  }
+                  $tbl.append(rows.join(''));
+              }
+              }
+                    },
+                    failure: function (response) {
+                        alert(response.d);
+                    }
+                });
+        }
+        function getDataCount()
+        
+        
+
+
+        {
+            //console.log("asasas");
+  $.ajax({
+                    type: "GET",
+                    url: "../Seller/SellerDashboard.aspx/GetDataCount",
+                    
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+      success: function (data) {
+          if (data.d == "0") {
+              document.getElementById("lblNotiCount").style.backgroundColor = "white";
+              document.getElementById("lblNotiCount").innerText = data.d;
+          }
+          else { 
+                 document.getElementById("lblNotiCount").style.backgroundColor = "red";
+                        //console.log(data.d);
+              document.getElementById("lblNotiCount").innerText = data.d;  
+              document.getElementById("notiCountMsg").innerText = "You have "+data.d+" notifications"; 
+                        //console.log(data.d);
+              }
+                    },
+                    failure: function (response) {
+                        alert(response.d);
+                    }
+                });
+          }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        	<div class="wrapper">
+                <div class="main-header">
+                    <div class="logo-header">
+                       <%-- <a href="../../LandingPages/home.aspx" class="logo">Art Sell
+                        </a>--%>
+                        <a href="../../LandingPages/home.aspx" title="ArtSell">
+                            <img src="../../images/artsell.png" alt="logo" width="100" height="50" />
+                        </a>
+                        <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <button type="button" class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+                    </div>
+                    <nav class="navbar navbar-header navbar-expand-lg">
+                        <div class="container-fluid">
+                            <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                                <li class="nav-item dropdown hidden-caret" style="font-weight:bold">
+                                    <asp:LinkButton runat="server" ID="liBSeller" Font-Bold="true" class="nav-link" href="../../Login_Registration/SellerRegistration.aspx"  aria-haspopup="true" aria-expanded="false">
+                                        <i class="la la-user" style="color:#9f3232;"></i> <span class="bcmSeller">Become A Seller </span>
+                                    </asp:LinkButton>
+                                    
+                                </li>
+                                 <li class="nav-item dropdown hidden-caret"  style="font-weight:bold"> 
+                                    <asp:LinkButton runat="server" ID="shopNow" class="nav-link" href="../../LandingPages/ArtsGallery.aspx" Font-Bold="true" aria-haspopup="true" aria-expanded="false">
+                                        <i class="la la-cart-plus" style="color:#9f3232;"></i> <span class="shopnow">Shop Now</span>
+                                    </asp:LinkButton>
+                                    
+                                </li>
+                                <li class="nav-item dropdown hidden-caret">
+                                    <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" runat="server" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="la la-envelope"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown hidden-caret">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  onclick="getData()" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="la la-bell"></i>
+                                        <label id="lblNotiCount"  class="notification" ></label>
+                                    </a>
+                                    <ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
+                                   
+                                        <li>
+                                            <div class="notif-center">
+                                                <table id="tbl"></table>
+                                    
+                       
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="see-all" href="javascript:void(0);"><strong>See all notifications</strong> <i class="la la-angle-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                                        <img id="imgMainProImage" style="visibility:hidden" runat="server" alt="user-img" width="36" class="img-circle"><span><asp:Label runat="server" ID="lblFirstName"></asp:Label></span> </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li>
+                                            <div class="user-box">
+                                                <div class="u-img">
+                                                    <img id="imgProfile" runat="server" alt="user"></div>
+                                                <div class="u-text">
+                                                    <h4><asp:Label runat="server" ID="lblFullName"></asp:Label> </h4>
+                                                    <p class="text-muted"><asp:Label runat="server" ID="lblUserEmail"></asp:Label></p>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="../../General/Users/EditProfile.aspx"><i class="ti-user"></i>Edit Profile</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="../../General/Users/AccountSettings.aspx"><i class="ti-settings"></i>Account settings</a>
+                                            <div class="dropdown-divider"></div>
+                                            <asp:LinkButton runat="server" ID="btnLogOut" OnClick="btnLogOut_Click" CssClass="dropdown-item" >Logout</asp:LinkButton>
+                                            
+                                        </li>
+                                        
+                                    </ul>
+                                    <!-- /.dropdown-user -->
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="sidebar">
+                    <div class="scrollbar-inner sidebar-wrapper">
+                        <div class="user">
+                            <div class="photo" style="width:40px;height:40px">
+                                <img id="imgMainUserImg" runat="server" >
+                            </div>
+                            <div class="info">
+                                <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                                    <span><span id="lblUserNameInSideBar" runat="server"></span>
+									<span class="user-level" ><span id="lblUserIDInSideBar" runat="server"></span></span>
+                                        <span class="caret"></span>
+                                    </span>
+                                </a>
+                                <div class="clearfix"></div>
+
+                                <div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+                                    <ul class="nav">
+                                        <li>
+                                            <a href="#profile">
+                                                <span class="link-collapse">My Profile</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../General/Users/EditProfile.aspx">
+                                                <span class="link-collapse">Edit Profile</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../../General/Users/AccountSettings.aspx">
+                                                <span class="link-collapse">Settings</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="nav">
+                            <asp:Repeater ID="rptDashBoard" runat="server">
+                                <ItemTemplate>
+                                     <li class="nav-item active" runat="server" id="liBuyerDash">
+                                <a href="../../Buyer/BuyerDashboard.aspx">
+                                    <i class="la la-dashboard"></i>
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+                            <li class="nav-item active" runat="server" id="liSellDash">
+                                <a href="../../Seller/SellerDashboard.aspx">
+                                    <i class="la la-dashboard"></i>
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" runat="server" id="liUpload">
+                                <a href="../../Seller/UploadArtwork.aspx">
+                                    <i class="la la-upload"></i>
+                                    <p>Upload</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="nav-item" runat="server" id="liGallery">
+                                <a href="../../Seller/SellerGallery.aspx">
+                                    <i class="la la-picture-o"></i>
+                                    <p>Gallery</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="nav-item" runat="server" id="liOrderReq">
+                                <a href="../../Seller/OrderRequests.aspx">
+                                    <i class="la la-pencil-square"></i>
+                                    <p>Order Requests</p>
+                                    <span style='<%# Convert.ToInt16(Eval("ordereq")) > 0 ? "background-color: #ff646d;color: white": "-" + ";" %>' class="badge badge-count"><%#Eval("ordereq") %></span>
+                                </a>
+                            </li>
+                            <li class="nav-item" runat="server" id="liSellHist">
+                                <a href="../../Seller/SellingHistory.aspx">
+                                    <i class="la la-history"></i>
+                                    <p>Selling History</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="nav-item" runat="server" id="liMyOrder">
+                                <a href="../../General/Orders/RunningOrders.aspx">
+                                    <i class="la la-level-up"></i>
+                                    <p>My Orders</p>
+                                    <span class="badge badge-count"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item" runat="server" id="li1">
+                                <a href="../../LandingPages/WishList.aspx">
+                                    <i class="la la-bookmark-o"></i>
+                                    <p>Wishlist</p>
+                                    <span class="badge badge-count">3</span>
+                                </a>
+                            </li>
+
+                            <%--<li class="btn btn-block btn-default" runat="server" id="liBSeller">
+                                <button class="btn btn-block btn-default" runat="server" onserverclick="BecomSeller_click" data-toggle="modal" data-target="#modalUpdate">
+                                    <i class="la la-dollar"></i>
+                                    Become a Seller</button>
+                            </li>--%>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                           
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-panel" style="background-color:white">
+                    <div class="content" style="background-color:white">
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                    </div>
+
+                </div>
+		</div>
+    </form>
+
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+<script src="../../AdminPanelAssets/assets/js/core/jquery.3.2.1.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/core/popper.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/core/bootstrap.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/plugin/chartist/chartist.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/plugin/chart-circle/circles.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/ready.min.js"></script>
+<script src="../../AdminPanelAssets/assets/js/demo.js"></script>
+
+
+
+</html>
+
+<script>
+
+</script>

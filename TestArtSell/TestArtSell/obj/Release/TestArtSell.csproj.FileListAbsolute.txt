@@ -1,0 +1,12 @@
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\TestArtSell.dll.config
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\TestArtSell.dll
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\TestArtSell.pdb
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\AjaxControlToolkit.dll
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\BouncyCastle.Crypto.dll
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\itextsharp.dll
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\Newtonsoft.Json.dll
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\itextsharp.xml
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\bin\Newtonsoft.Json.xml
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\obj\Release\TestArtSell.dll
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\obj\Release\TestArtSell.pdb
+G:\ArtSell_V_0.1.1\tfs_test\TestArtSell\TestArtSell\obj\Release\TestArtSell.csprojResolveAssemblyReference.cache

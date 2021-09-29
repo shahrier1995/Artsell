@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SellerMaster.master.cs" Inherits="TestArtSell.Seller.SellerMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>ArtSell - Unlock Your Dreams</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <link rel="stylesheet" href="../AdminPanelAssets/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"/>
+    <link rel="stylesheet" href="../AdminPanelAssets/assets/css/ready.css"/>
+    <link rel="stylesheet" href="../AdminPanelAssets/assets/css/demo.css"/>
+    <link href="../AdminPanelAssets/assets/css/Gallery.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="wrapper">
+                <div class="main-header" style="background: #84a6d6">
+                    <div class="logo-header">
+                        <a href="index.html" class="logo">Ready Dashboard
+                        </a>
+                        <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                    </div>
+                    <nav class="navbar navbar-header navbar-expand-lg">
+                        <div class="container-fluid">
+                            
+                        </div>
+                    </nav>
+                </div>
+                <div class="sidebar" style="background: #84a6d6">
+                    <div class="scrollbar-inner sidebar-wrapper">
+                        <div class="user">
+                            <div class="photo">
+                                <img src="../AdminPanelAssets/assets/img/profile.jpg">
+                            </div>
+                            <div class="info">
+                                <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                                    <span>Hizrian
+									<span class="user-level">Administrator</span>
+                                        <span class="caret"></span>
+                                    </span>
+                                </a>
+                                <div class="clearfix"></div>
+
+                                <div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+                                    <ul class="nav">
+<%--                                        <li>
+                                            <a href="#profile">
+                                                <span class="link-collapse">My Profile</span>
+                                            </a>
+                                        </li>--%>
+                                        <li>
+                                            <a href="#edit">
+                                                <span class="link-collapse">Edit Profile</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#settings">
+                                                <span class="link-collapse">Settings</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="index.html">
+                                    <i class="la la-dashboard"></i>
+                                    <p>Dashboard</p>
+                                    <span class="badge badge-count">5</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="SellerArtsGallery.aspx">
+                                    <i class="la la-table"></i>
+                                    <p>Gallery</p>
+
+                                </a>
+                            </li>
+                            <li class="nav-item update-pro">
+                            
+                               <button runat="server" id="btnLogOut" onserverclick="btnLogOut_Click" class="btn btn-danger">Log Out</button>
+                       
+                            </li>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-panel">
+                    <div class="content">
+                        <div class="container-fluid">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="../AdminPanelAssets/assets/js/core/jquery.3.2.1.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/core/popper.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/core/bootstrap.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/plugin/chartist/chartist.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="../AdminPanelAssets/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/plugin/chart-circle/circles.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/ready.min.js"></script>
+    <script src="../AdminPanelAssets/assets/js/demo.js"></script>
+</body>
+</html>

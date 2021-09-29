@@ -1,0 +1,224 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LandingMaster.master.cs" Inherits="TestArtSell.LandingPages.LandingMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ArtSell - Unlock Your Dreams</title>
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+
+    <!-- **CSS - stylesheets** -->
+
+    <link href="../style.css" rel="stylesheet" />
+    <!-- **Additional - stylesheets** -->
+
+    <link href="../css/animations.css" rel="stylesheet" />
+
+
+    <link href="../css/shortcodes.css" rel="stylesheet" />
+    <link href="../skins/red/style.css" rel="stylesheet" />
+    <link href="../css/isotope.css" rel="stylesheet" />
+    <link href="../css/prettyPhoto.css" rel="stylesheet" />
+    <link href="../css/pace.css" rel="stylesheet" />
+    <link href="../css/responsive.css" rel="stylesheet" />
+   <%-- <link href="../dark/dark.css" rel="stylesheet" />--%>
+    <link href="../light/light.css" rel="stylesheet" />
+    <script src="../js/modernizr.js"></script>
+<%--    <link href="css/pace.css" rel="stylesheet" type="text/css" />--%>
+    <!-- Modernizr -->
+
+    <!-- **Font Awesome** -->
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Modernizr -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/modernizr.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+            $("#btnMember").click(function () {
+                event.preventDefault();
+                $("#nigga").toggle('slow');
+            });
+        });
+
+    </script>
+
+    <style>
+        .sub-menu{
+            top:70px;
+        }
+        @media only screen and (max-width: 600px) {
+   .sub-menu{
+       top:0px;
+        }
+}
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+                  <div id="header-wrapper" style="background-color:white">
+            <!-- **header-wrapper Starts** -->
+            <header>
+            <section id="header" class="header" style="height: 100px;background-color:white">
+                <div class="container">
+
+                            <!-- **Logo - End** -->
+                            <div class="logo" style="padding: 0px; margin: 0px;">
+                                <a href="../../LandingPages/home.aspx" title="ArtSell">
+                                    <img src="../images/artsell.png" alt="logo" width="180" height="95" />
+                                </a>
+                            </div>
+
+                            <!-- **Logo - End** -->
+                            <div class="basket-top" style="padding: 0px 0;margin-top:-5px">
+                                <a id="btnMember" runat="server" class="dt-sc-button small type2" href="#" style="border-radius:5px; cursor: pointer; color: white; text-decoration: none">Join</a>
+
+                                <a runat="server" id="btnLogin" class="dt-sc-button small type2" href="../Login_Registration/LoginForm.aspx" style="border-radius:5px;cursor: pointer; color: white; text-decoration: none">Login</a>
+                                <a href="OrderCart.aspx" title="Shopping Cart"><i style="font-size: 25px;color:#d93737" class="fa fa-shopping-cart" ></i></a>
+                               <%-- <a href="#" title="Go to Facebook Page"><i class="fa fa-facebook-square" style="font-size:25px;color:#4b88f6"></i></a>
+                            --%>
+                            </div>
+
+                            <nav id="main-menu">
+
+                                <div id="dt-menu-toggle" class="dt-menu-toggle">
+                                    Menu
+                              <span class="dt-menu-toggle-icon"></span>
+                                </div>
+                                <ul class="menu type4" style="z-index: 1">
+                                    <!-- Menu Starts -->
+                                    <li class="menu-item-simple-parent" style="padding: 0px;"><a href="../LandingPages/Home.aspx">Home</a>
+
+                                    </li>
+                                    <li class="menu-item-simple-parent" style="padding: 0px;">
+                                        <a href="../LandingPages/About.aspx">About us</a>
+                                    </li>
+                                    <li class="menu-item-simple-parent" style="padding: 0px;"><a href="../LandingPages/ArtsGallery.aspx">Gallery</a>
+
+                                    </li>
+
+                                    <li class="menu-item-simple-parent" style="padding: 0px;"><a href="../LandingPages/ArtistList.aspx">Artists</a>
+
+                                        <%--=====================Uncomment Later==================================--%>
+
+
+                               
+                                    </li>
+                                    <li class="menu-item-simple-parent" style="padding: 0px;">
+                                        <a href="../LandingPages/Contacts.aspx">contact</a>
+                                    </li>
+
+                                    <li class=" current_page_item menu-item-simple-parent" style="padding: 0px;">
+                                        <asp:LinkButton ID="LinkUser" runat="server" OnClick="btnDashboard_Click"></asp:LinkButton>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <asp:LinkButton ID="btndashboard" runat="server" OnClick="btnDashboard_Click">Dashboard</asp:LinkButton></li>
+                                            <li>
+                                                <asp:LinkButton ID="btnWishList" runat="server" OnClick="btnWishList_Click">Wish List</asp:LinkButton></li>
+                                            <li>
+                                                <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click"> Log Out</asp:LinkButton></li>
+
+
+                                        </ul>
+                                        <a id="btnExpand" runat="server" class="dt-menu-expand">+</a>
+                                    </li>
+
+                                </ul>
+                                <!-- Menu Ends -->
+                            </nav>
+
+                        </div>
+
+               
+                <div id="nigga"  style="position: relative; background-color: #fafafa; color: black; display: none; text-align: center;padding:10px">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                <h3 style="color: black">Want to buy an art?
+                                </h3>
+                            </div>
+                            <a runat="server" class="dt-sc-button small type2" style="color:white;text-decoration:none;border-radius:5px" href="../Login_Registration/RegistrationForm.aspx">Become a Buyer</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <h3 style="color: black">Want to sell an art?
+                                </h3>
+                            </div>
+                            <a runat="server" class="dt-sc-button small type2" style="color:white;text-decoration:none;border-radius:5px" href="../Login_Registration/SellerRegistration.aspx">Become a Seller</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+            </header>
+        </div>
+  
+        
+        <!-- **header-wrapper Ends** -->
+        <div id="main" >
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer id="footer" class="animate" data-animation="fadeIn" data-delay="100">
+                <div class="container">
+                    <div class="copyright">
+
+                        <ul class="footer-links">
+                           <li><a href="../LandingPages/Contacts.aspx">Contact us</a></li>
+                            <li><a href="../LandingPages/PrivacyPolicy.aspx">Privacy policy</a></li>
+                            <li><a href="../LandingPages/TermsAndCondition.aspx">Terms of use</a></li>
+                          <%--  <li><a href="#">Faq</a></li>--%>
+                        </ul>
+
+                    <%--    <ul class="payment-options">
+                            <li><a href="#" class="fa fa-cc-amex"></a></li>
+                            <li><a href="#" class="fa fa-cc-mastercard"></a></li>
+                            <li><a href="#" class="fa fa-cc-visa"></a></li>
+                            <li><a href="#" class="fa fa-cc-discover"></a></li>
+                            <li><a href="#" class="fa fa-cc-paypal"></a></li>
+                        </ul>--%>
+
+                        <p>© 2019 <a href="#">ARTSELL</a>. All rights reserved.</p>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+
+    <!-- **jQuery** -->
+
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/jquery.inview.js" type="text/javascript"></script>
+    <script src="../js/jquery.viewport.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/jsplugins.js" type="text/javascript"></script>
+    <script src="../js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="../js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.tipTip.minified.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/jquery.tabs.min.js"></script>
+</body>
+</html>

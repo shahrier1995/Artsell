@@ -1,0 +1,56 @@
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\ApplicationInsights.config
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\csc.exe
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\vbc.exe
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\VBCSCompiler.exe
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\ArtSell.dll.config
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\ArtSell.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\ArtSell.pdb
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\Microsoft.AI.Web.xml
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\obj\Debug\ArtSellTest.csprojResolveAssemblyReference.cache
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\obj\Debug\ArtSell.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\obj\Debug\ArtSell.pdb
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Shahr\OneDrive\documents\visual studio 2015\Projects\ArtSell\ArtSell\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\Artsell\ArtSell\ArtSell\bin\ApplicationInsights.config
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\csc.exe
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\System.Collections.Immutable.dll
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\System.Reflection.Metadata.dll
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\vbc.exe
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\VBCSCompiler.exe
+E:\Artsell\ArtSell\ArtSell\bin\roslyn\VBCSCompiler.exe.config
+E:\Artsell\ArtSell\ArtSell\bin\ArtSell.dll.config
+E:\Artsell\ArtSell\ArtSell\bin\ArtSell.dll
+E:\Artsell\ArtSell\ArtSell\bin\ArtSell.pdb
+E:\Artsell\ArtSell\ArtSell\bin\Microsoft.AspNet.FriendlyUrls.dll
+E:\Artsell\ArtSell\ArtSell\bin\Microsoft.AI.DependencyCollector.xml
+E:\Artsell\ArtSell\ArtSell\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Artsell\ArtSell\ArtSell\bin\Microsoft.AI.Web.xml
+E:\Artsell\ArtSell\ArtSell\bin\Microsoft.AI.WindowsServer.xml
+E:\Artsell\ArtSell\ArtSell\bin\Microsoft.ApplicationInsights.xml
+E:\Artsell\ArtSell\ArtSell\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\Artsell\ArtSell\ArtSell\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Artsell\ArtSell\ArtSell\obj\Debug\ArtSellTest.csprojAssemblyReference.cache
+E:\Artsell\ArtSell\ArtSell\obj\Debug\ArtSellTest.csproj.CoreCompileInputs.cache
+E:\Artsell\ArtSell\ArtSell\obj\Debug\ArtSellTest.csproj.CopyComplete
+E:\Artsell\ArtSell\ArtSell\obj\Debug\ArtSell.dll
+E:\Artsell\ArtSell\ArtSell\obj\Debug\ArtSell.pdb
